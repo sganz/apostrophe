@@ -1,13 +1,14 @@
 .apos-buttons
 {
   background: @apos-white;
+  white-space: nowrap;
   .apos-glow;
   .apos-rounded;
   .apos-button-border(@apos-green);
   .apos-button-group
   {
-    float: left;
-    margin: 0 @apos-padding-1 / 2;
+    display: inline-block;
+    margin: 0 (@apos-padding-1 / 2);
   }
   .apos-button
   {
@@ -39,6 +40,12 @@
   {
     opacity: 1;
     .apos-transition();
+  }
+
+  .fa-caret-right {
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
   }
 
 
@@ -94,6 +101,13 @@
 }
 
 // TYPES =======================
+
+.apos-button--small {
+  .apos-button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
 
 .apos-button--in-context
 {
@@ -225,6 +239,21 @@
   &:hover, &:active
   {
     box-shadow: none;
+  }
+}
+
+.apos-button--inline {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  
+  .apos-button {
+    color: @apos-dark;
+    padding: 4px 5px;
+    font-size: 12px;
+    &:hover { color: @apos-white; }
   }
 }
 

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% block locale %}en{% endblock %}">
   <head>
+    {% block startHead %}
+    {% endblock %}
     <title>{% block title %}{% endblock %}</title>
     {{ apos.assets.stylesheets(data.when) }}
     {% block standardHead %}
@@ -14,22 +16,23 @@
       {{ apos.adminBar.output() }}
     {% endblock %}
 
-    {% if data.user %}
-      <div class="apos-ui">
-        <div class="apos-context-menu-container">
-          {{ apos.pages.publishMenu({ publishMenu: data.publishMenu, page: data.page, piece: data.piece, bottom: true }) }}
-          {{ apos.pages.menu({ contextMenu: data.contextMenu, page: data.page, bottom: true })}}
-          {{ apos.pages.afterContextMenu() }}
+    {% block apostropheContextMenu %}
+      {% if data.user %}
+        <div class="apos-ui">
+          <div class="apos-context-menu-container">
+            {{ apos.pages.publishMenu({ publishMenu: data.publishMenu, page: data.page, piece: data.piece, bottom: true }) }}
+            {{ apos.pages.menu({ contextMenu: data.contextMenu, page: data.page, bottom: true })}}
+            {{ apos.pages.afterContextMenu() }}
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    {% endblock %}
     <div class="apos-refreshable" data-apos-refreshable>
       {% block beforeMain %}{% endblock %}
-      <a name="main"></a>
+      {% block mainAnchor %}<a name="main"></a>{% endblock %}
       {% block main %}{% endblock %}
       {% block afterMain %}{% endblock %}
     </div>
-    {{ apos.assets.templates(data.when) }}
     {{ apos.assets.scripts(data.when) }}
     {% block jsCalls %}
       <script type="text/javascript">
@@ -37,7 +40,6 @@
         {{ data.js.reqCalls }}
       </script>
     {% endblock %}
-    {% block extraBody %}
-    {% endblock %}
+    {% block extraBody %}{% endblock %}
   </body>
 </html>

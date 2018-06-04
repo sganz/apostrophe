@@ -3,19 +3,19 @@ var assert = require('assert');
 
 var apos;
 
-describe('Templates', function(){
+describe('Templates', function() {
 
-  this.timeout(5000);
+  this.timeout(t.timeout);
 
   after(function(done) {
     return t.destroy(apos, done);
   });
 
   it('should have a templates property', function(done) {
-  	apos = require('../index.js')({
+    apos = require('../index.js')({
       root: module,
       shortName: 'test',
-      
+
       modules: {
         'apostrophe-express': {
           secret: 'xxx',
@@ -35,7 +35,7 @@ describe('Templates', function(){
         return callback(null);
       },
       afterListen: function(err) {
-        // assert(!err);
+        assert(!err);
         done();
       }
     });
