@@ -1,10 +1,11 @@
 # [<img src="./ApostropheCMS_logo.png" height="140" title="ApostropheCMS" />](http://apostrophecms.org/)
 
-[![Join the chat at https://gitter.im/apostrophecms/apostrophe](https://badges.gitter.im/apostrophecms/apostrophe.svg)](https://gitter.im/apostrophecms/apostrophe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ApostropheCMS is a content management system (CMS) for Node.js. It supports in-context editing, schema-driven content types, flexible widgets and a great deal more. This module contains everything necessary to build a website with ApostropheCMS.
 
 Please see the [ApostropheCMS documentation](http://apostrophecms.org/docs) for detailed information about building sites with ApostropheCMS.
+
+[![TravisCI Status](https://travis-ci.org/apostrophecms/apostrophe.svg?branch=master)](https://travis-ci.org/apostrophecms/apostrophe)
+[![Chat on Discord](https://img.shields.io/discord/517772094482677790.svg)](http://chat.apostrophecms.org)
 
 ## Getting Started
 
@@ -29,11 +30,22 @@ ApostropheCMS is Node.js all the way through, which means it can be [extended](h
 * [apostrophe-events](https://github.com/punkave/apostrophe-events) - Manage upcoming events.
 * [apostrophe-workflow](https://github.com/punkave/apostrophe-workflow) - Add powerful localization capabilities to your project.
 * [apostrophe-passport](https://github.com/punkave/apostrophe-passport) - Authenticate via Twitter, Facebook, Github and more.
+* [apostrophe-saml](https://github.com/punkave/apostrophe-saml) - Authenticate via Shibboleth, as well as corporate SAML environments like Salesforce.
 * [apostrophe-places](https://github.com/punkave/apostrophe-places) - Manage geotagged content and display it on a map.
 * [apostrophe-redirects](https://github.com/punkave/apostrophe-redirects) - An easy redirects module.
 
 ## Additional Resources
-We've got some great [open-source projects](http://apostrophecms.org/docs/tutorials/intermediate/deployment.html) that can help you out deploying, managing and maintaining ApostropheCMS sites.
+We've got some great [open-source tools and how-to articles](http://apostrophecms.org/docs/tutorials/intermediate/deployment.html) that can help you out deploying, managing and maintaining ApostropheCMS sites.
+
+## Community
+
+**Report bugs and submit pull requests** via [github](https://github.com/apostrophecms/apostrophe/issues).
+
+**Ask how-to questions** via [StackOverflow](https://stackoverflow.com/questions/tagged/apostrophe-cms). Be sure to tag them `apostrophe-cms`.
+
+**Stay up to date with announcements** on our [forum](https://forum.apostrophecms.org).
+
+**Chat with the community** on our [Discord server](http://chat.apostrophecms.org).
 
 ## License
 ApostropheCMS is released under the [MIT License](https://github.com/punkave/apostrophe/blob/master/LICENSE.md).
